@@ -1,0 +1,62 @@
+.region-top
+{
+  background: $blue;
+  color: white;
+  
+  &:after
+  {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  
+  & > div
+  {
+    max-width: 1200px;
+    padding: 0 25px;
+    margin: 0 auto;
+  }
+  a
+  {
+    color: white;
+    text-decoration: none;
+    
+    &:hover
+    {
+      text-decoration: underline;
+    }
+  }
+}
+
+.block-search
+{
+  float: left;
+}
+
+.block--language-switcher
+{
+  float: right;
+  
+  ul
+  {
+    list-style: none;
+    margin: 0;
+  }
+  li
+  {
+    display: inline-block;
+    margin: 0;
+    
+    &:first-child:after
+    {
+      content: "|";
+      padding: 0 8px;
+    }
+  }
+  a
+  {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+  }
+}

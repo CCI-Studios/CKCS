@@ -1,0 +1,16 @@
+uuid: b965e85a-3c00-4571-bd04-28661830737b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.header_image
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.header_image
+target_entity_type_id: node
+target_bundle: header_image
+default_langcode: site_default
+language_alterable: true

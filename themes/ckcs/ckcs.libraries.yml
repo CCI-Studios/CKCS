@@ -4,6 +4,7 @@ global:
     theme:
       css/importer.css: {}
   js:
+    js/menu.js: {}
   dependencies:
     - core/classList
     - ckcs/slick

@@ -11,16 +11,16 @@ dependencies:
     - ckcs
 third_party_settings:
   block_class:
-    classes: ''
+    classes: block--footer-address
 id: addressphone
 theme: ckcs
 region: footer
-weight: 0
+weight: -9
 provider: null
 plugin: 'block_content:4c10e77f-0013-4a82-9e3b-3215bc127e77'
 settings:
   id: 'block_content:4c10e77f-0013-4a82-9e3b-3215bc127e77'
-  label: Address/Phone
+  label: 'Footer Address/Phone'
   provider: block_content
   label_display: '0'
   status: true

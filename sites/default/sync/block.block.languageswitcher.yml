@@ -9,7 +9,7 @@ dependencies:
     - ckcs
 third_party_settings:
   block_class:
-    classes: ''
+    classes: block--language-switcher
 id: languageswitcher
 theme: ckcs
 region: top

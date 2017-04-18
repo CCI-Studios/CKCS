@@ -1,0 +1,55 @@
+footer
+{
+  background: $purple;
+  color: white;
+  clear: both;
+  padding: 20px;
+  text-align: center;
+  
+  a
+  {
+    color: white;
+    text-decoration: none;
+    
+    &:hover
+    {
+      text-decoration: underline;
+    }
+  }
+}
+.region-footer
+{
+  display: inline;
+  
+  & > div
+  {
+    display: inline;
+  }
+}
+.block--footer-address
+{
+  margin-bottom: 1em;
+}
+.menu--footer
+{
+  font-size: 0.875em;
+  display: inline;
+
+  ul
+  {
+    margin: 0;
+    list-style: none;
+    display: inline;
+  }
+  li
+  {
+    margin: 0;
+    display: inline;
+    margin-right: 25px;
+  }
+}
+.site-by-cci
+{
+  font-size: 0.875em;
+  display: inline;
+}

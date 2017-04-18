@@ -1,0 +1,17 @@
+uuid: c30678a5-1e5d-43d4-a58b-697dcf9c39e6
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Header image'
+type: header_image
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

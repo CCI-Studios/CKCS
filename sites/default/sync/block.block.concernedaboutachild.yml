@@ -11,7 +11,7 @@ dependencies:
     - ckcs
 third_party_settings:
   block_class:
-    classes: ''
+    classes: block--concerned-about-a-child
 id: concernedaboutachild
 theme: ckcs
 region: navigation

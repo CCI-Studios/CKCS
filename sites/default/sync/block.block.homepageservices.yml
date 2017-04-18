@@ -1,0 +1,35 @@
+uuid: 99d728ba-a18b-4438-81b3-f02518b0233f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e18997e8-9e57-4fee-a9f8-a1e85ef80207'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - ckcs
+third_party_settings:
+  block_class:
+    classes: home-services
+id: homepageservices
+theme: ckcs
+region: header
+weight: -7
+provider: null
+plugin: 'block_content:e18997e8-9e57-4fee-a9f8-a1e85ef80207'
+settings:
+  id: 'block_content:e18997e8-9e57-4fee-a9f8-a1e85ef80207'
+  label: 'Homepage services'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
