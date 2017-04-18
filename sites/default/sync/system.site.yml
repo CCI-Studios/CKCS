@@ -1,0 +1,15 @@
+uuid: 97049ae0-558c-4756-b960-39f4653b6e2d
+name: 'Chatham-Kent Children''s Services'
+mail: admin@example.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
+mail_notification: ''
