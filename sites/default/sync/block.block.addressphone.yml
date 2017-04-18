@@ -1,0 +1,29 @@
+uuid: 73233705-478c-4d8d-a1e3-9b0ee66b5adb
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4c10e77f-0013-4a82-9e3b-3215bc127e77'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - ckcs
+third_party_settings:
+  block_class:
+    classes: ''
+id: addressphone
+theme: ckcs
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:4c10e77f-0013-4a82-9e3b-3215bc127e77'
+settings:
+  id: 'block_content:4c10e77f-0013-4a82-9e3b-3215bc127e77'
+  label: Address/Phone
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,13 @@
+name: CKCS
+type: theme
+description: 'CKCS theme'
+core: 8.x
+libraries:
+  - ckcs/global
+base theme: classy
+regions:
+  top: Top
+  navigation: Navigation
+  header: Header
+  content: Content
+  footer: Footer

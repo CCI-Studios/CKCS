@@ -1,0 +1,26 @@
+uuid: 1c874fa1-8737-474e-8d67-125ed4093e87
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - search
+  theme:
+    - ckcs
+third_party_settings:
+  block_class:
+    classes: ''
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: ckcs_search
+theme: ckcs
+region: top
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: '0'
+visibility: {  }
