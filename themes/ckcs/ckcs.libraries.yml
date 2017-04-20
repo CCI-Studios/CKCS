@@ -19,3 +19,10 @@ slick:
       css/slick.css: {}
   dependencies:
     - core/jquery
+
+home-widgets:
+  version: 1.x
+  js:
+    js/home-widgets.js: {}
+  dependencies:
+    - ckcs/slick

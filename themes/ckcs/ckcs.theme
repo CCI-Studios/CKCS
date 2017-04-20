@@ -1,0 +1,7 @@
+<?php
+
+function ckcs_preprocess_page(&$variables) {
+  if ($variables['is_front']) {
+    $variables['#attached']['library'][] = 'ckcs/home-widgets';
+  }
+}

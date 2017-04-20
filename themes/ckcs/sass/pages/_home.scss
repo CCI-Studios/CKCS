@@ -1,0 +1,253 @@
+.path-frontpage main
+{
+  display: none;
+}
+
+.block--home-services
+{
+  text-align: center;
+  padding: 40px 0 10px 0;
+  clear: both;
+  
+  h2
+  {
+    position: absolute;
+    left: -99999px;
+    font-size: 0;
+  }
+  ul
+  {
+    margin: 0;
+    list-style: none;
+  }
+  li
+  {
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .service
+  {
+    display: block;
+    padding-top: 182px;
+    width: 175px;
+    padding: 182px 20px 10px 20px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 80% auto;
+    color: $purple;
+    text-decoration: none;
+    font-size: 1.375em;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .service__child-protection
+  {
+    background-image: url(../images/icon-child-protection.svg);
+  }
+  .service__mental-health
+  {
+    background-image: url(../images/icon-mental-health.svg);
+  }
+  .service__development
+  {
+    background-image: url(../images/icon-development.svg);
+  }
+  .service__foster-adoption
+  {
+    background-image: url(../images/icon-foster-adoption.svg);
+  }
+  .service__volunteers
+  {
+    background-image: url(../images/icon-volunteers.svg);
+  }
+}
+.block--donate-now
+{
+  background: #00a055;
+  color: white;
+  padding: 40px 25px;
+  
+  & > div
+  {
+    max-width: 740px;
+    margin: 0 auto;
+  }
+  h2
+  {
+    margin-bottom: 0.25em;
+  }
+  .button
+  {
+    display: inline-block;
+    color: #00a055;
+    background: white;
+    border-radius: 20px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 30px;
+    text-decoration: none;
+  }
+}
+.node--type-header-image
+{
+  height: 0;
+  padding-bottom: 25%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  
+  &
+  {
+    @media screen and (max-width: 1000px)
+    {
+      padding-bottom: 320px;
+    }
+  }
+  
+  .node__content
+  {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    
+    & > div
+    {
+      max-width: 1200px;
+      height: 100%;
+      padding: 25px 60px;
+      margin: 0 auto;
+      box-sizing: border-box;
+      
+      & > div
+      {
+        width: 100%;
+        height: 100%;
+        max-width: 540px;
+        display: table;
+        
+        & > div
+        {
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  h2
+  {
+    color: $purple;
+    font-size: 2.5em;
+    line-height: 1.2;
+  }
+  .field--name-field-link a
+  {
+    color: white;
+    background: $purple;
+    border-radius: 20px;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 25px;
+    margin: 0.5em 0;
+    
+  }
+}
+.slick-arrow
+{
+  border: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+  background-size: contain;
+  font-size: 0;
+  display: block;
+  width: 23px;
+  height: 52px;
+  position: absolute;
+  top: 50%;
+  margin-top: -26px;
+  cursor: pointer;
+  z-index: 1;
+}
+.slick-prev
+{
+  left: 15px;
+  background-image: url(../images/arrow-left-big.svg);
+}
+.slick-next
+{
+  right: 15px;
+  background-image: url(../images/arrow-right-big.svg);
+}
+
+.view-home-widgets
+{
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  &:after
+  {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .views-row
+  {
+    margin: 0 20px;
+    color: white;
+    border-radius: 5px;
+  }
+  .field--name-field-widget-image img
+  {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .node__content
+  {
+    background: $blue;
+    padding: 40px 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  h2
+  {
+    line-height: 1.2;
+    margin-bottom: 0.2em;
+  }
+  .field--name-field-link
+  {
+    text-align: center;
+    margin-top: 0.8em;
+    
+    a
+    {
+      color: $blue;
+      background: white;
+      display: inline-block;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 25px;
+      text-decoration: none;
+      border-radius: 20px;
+      min-width: 110px;
+    }
+  }
+  .slick-prev
+  {
+    left: -15px;
+  }
+  .slick-next
+  {
+    right: -15px;
+  }
+}
