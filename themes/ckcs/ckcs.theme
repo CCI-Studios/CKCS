@@ -5,3 +5,14 @@ function ckcs_preprocess_page(&$variables) {
     $variables['#attached']['library'][] = 'ckcs/home-widgets';
   }
 }
+
+function ckcs_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  switch ($form_id) {
+    case "user_login_form":
+      unset($form['name']['#description']);
+      unset($form['pass']['#description']);
+      break;
+    default:
+      // print $form_id;
+  }
+}

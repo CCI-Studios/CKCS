@@ -27,10 +27,40 @@
     }
   }
 }
-
-.block-search
+.block-search,
+.block--search-button
 {
   float: left;
+  padding: 4px 0;
+}
+.block-search
+{
+  display: none;
+  
+  .form-item-keys
+  {
+    input
+    {
+      height: 32px;
+      line-height: 32px;
+      display: inline-block;
+      width: 200px;
+    }
+  }
+  .form-submit
+  {
+    height: 32px;
+    line-height: 32px;
+    min-width: 0;
+  }
+}
+.search-button
+{
+  height: 32px;
+  line-height: 32px;
+  display: block;
+  padding-left: 24px;
+  background: url(../images/icon-search.svg) no-repeat left center;
 }
 
 .block--language-switcher
