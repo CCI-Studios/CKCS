@@ -1,0 +1,11 @@
+uuid: 6f84013e-57cd-40a2-8c7f-c8be7a92f916
+langcode: en
+status: true
+dependencies:
+  config:
+    - entityqueue.entity_queue.header_images
+id: entity_subqueue.header_images
+target_entity_type_id: entity_subqueue
+target_bundle: header_images
+default_langcode: site_default
+language_alterable: false

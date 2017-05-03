@@ -1,0 +1,18 @@
+uuid: 61d23d65-a571-4734-a758-aa3fdf53a7c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Accordion page'
+type: accordion_page
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

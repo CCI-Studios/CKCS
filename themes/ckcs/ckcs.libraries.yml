@@ -26,3 +26,8 @@ home-widgets:
     js/home-widgets.js: {}
   dependencies:
     - ckcs/slick
+
+accordion:
+  version: 1.x
+  js:
+    js/accordion.js: {}

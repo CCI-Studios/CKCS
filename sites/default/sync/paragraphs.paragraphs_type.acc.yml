@@ -1,0 +1,7 @@
+uuid: 08c5fd7a-bb34-4c57-9de7-5d2851970571
+langcode: en
+status: true
+dependencies: {  }
+id: acc
+label: 'Accordion item'
+behavior_plugins: {  }
