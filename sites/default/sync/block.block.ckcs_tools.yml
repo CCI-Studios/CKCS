@@ -13,7 +13,7 @@ _core:
 id: ckcs_tools
 theme: ckcs
 region: top
-weight: 0
+weight: -6
 provider: null
 plugin: 'system_menu_block:tools'
 settings:

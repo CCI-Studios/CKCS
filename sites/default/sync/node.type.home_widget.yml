@@ -1,0 +1,17 @@
+uuid: 090e9a12-1ab1-431f-ac7b-219d4b1238c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Home widget'
+type: home_widget
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

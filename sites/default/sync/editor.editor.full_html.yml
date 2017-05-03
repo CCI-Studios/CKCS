@@ -21,6 +21,11 @@ settings:
             - Italic
             - Strike
             - '-'
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - '-'
+            - '-'
             - RemoveFormat
         -
           name: Linking

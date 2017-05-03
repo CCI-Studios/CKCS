@@ -12,7 +12,7 @@ dependencies:
     - ckcs
 third_party_settings:
   block_class:
-    classes: home-services
+    classes: block--home-services
 id: homepageservices
 theme: ckcs
 region: header

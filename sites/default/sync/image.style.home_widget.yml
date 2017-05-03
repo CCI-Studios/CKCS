@@ -1,0 +1,16 @@
+uuid: d9333f22-cb54-42ef-8cf8-cf8a7f0ccccb
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: home_widget
+label: 'Home widget'
+effects:
+  9e09fbe1-cd84-4b69-b394-cc0664cacd42:
+    uuid: 9e09fbe1-cd84-4b69-b394-cc0664cacd42
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 325
+      height: 180

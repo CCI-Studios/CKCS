@@ -12,7 +12,7 @@ dependencies:
     - ckcs
 third_party_settings:
   block_class:
-    classes: donate-now
+    classes: block--donate-now
 id: donatenow
 theme: ckcs
 region: header

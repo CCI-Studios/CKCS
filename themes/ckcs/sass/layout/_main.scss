@@ -8,3 +8,8 @@ main
     max-width: 1200px;
   }
 }
+
+.not-front main > div
+{
+  max-width: 740px;
+}
