@@ -15,7 +15,7 @@ third_party_settings:
 id: searchbutton
 theme: ckcs
 region: top
-weight: -10
+weight: -11
 provider: null
 plugin: 'block_content:ef4a16e7-301c-47b7-be5f-245cdab505c4'
 settings:

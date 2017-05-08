@@ -24,3 +24,27 @@ main
   font-size: 2.75em;
   line-height: 1;
 }
+
+.breadcrumb
+{
+  color: $purple;
+  font-weight: 600;
+  padding-bottom: 0;
+  
+  a
+  {
+    color: $purple;
+    text-decoration: none;
+    margin: 0 0.5em;
+    
+    &:hover,
+    &:focus
+    {
+      text-decoration: underline;
+    }
+  }
+  li:before
+  {
+    content: ' > ';
+  }
+}
