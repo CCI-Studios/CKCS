@@ -7,4 +7,6 @@ logo:
   use_default: 0
   path: themes/ckcs/images/logo.png
 favicon:
-  use_default: 1
+  use_default: 0
+  path: themes/ckcs/images/favicon.ico
+  mimetype: image/vnd.microsoft.icon
