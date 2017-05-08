@@ -36,6 +36,7 @@
     background-repeat: no-repeat;
     background-size: 80% auto;
     color: $purple;
+    font-weight: 600;
     text-decoration: none;
     font-size: 1.375em;
     line-height: 1;
@@ -65,7 +66,7 @@
 }
 .block--donate-now
 {
-  background: #00a055;
+  background: $green;
   color: white;
   padding: 40px 25px;
   
@@ -81,7 +82,8 @@
   .button
   {
     display: inline-block;
-    color: #00a055;
+    color: $green;
+    font-weight: 600;
     background: white;
     border-radius: 20px;
     height: 40px;
@@ -147,6 +149,7 @@
   .field--name-field-link a
   {
     color: white;
+    font-weight: 600;
     background: $purple;
     border-radius: 20px;
     height: 40px;
@@ -234,6 +237,7 @@
     a
     {
       color: $blue;
+      font-weight: 600;
       background: white;
       display: inline-block;
       height: 40px;
