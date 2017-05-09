@@ -35,7 +35,6 @@ main
   {
     color: $purple;
     text-decoration: none;
-    margin: 0 0.5em;
     
     &:hover,
     &:focus
@@ -43,8 +42,14 @@ main
       text-decoration: underline;
     }
   }
-  li:before
+  li
   {
-    content: ' > ';
+    margin-right: 0.5em;
+    
+    &:before
+    {
+      content: ' > ';
+      margin-right: 0.5em;
+    }
   }
 }
