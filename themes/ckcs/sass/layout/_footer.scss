@@ -30,6 +30,14 @@ footer
 .block--footer-address
 {
   margin-bottom: 1em;
+  
+  @media screen and (max-width: 720px)
+  {
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
 }
 .menu--footer
 {
@@ -47,6 +55,13 @@ footer
     margin: 0;
     display: inline;
     margin-right: 25px;
+    
+    @media screen and (max-width: 540px)
+    {
+      display: block;
+      margin-right: 0;
+      line-height: 2;
+    }
   }
 }
 .site-by-cci
