@@ -1,0 +1,39 @@
+.block--contact-map
+{
+  position: relative;
+}
+.contact-map
+{
+  height: 400px;
+}
+.contact-address
+{
+  position: absolute;
+  top: 35px;
+  left: 50px;
+  width: 250px;
+  height: auto;
+  padding: 30px;
+  border: 3px solid $purple;
+  border-radius: 24px;
+  color: $purple;
+  background: white;
+  z-index: 10000;
+  
+  img
+  {
+    width: 250px;
+    margin-bottom: 1em;
+  }
+  strong
+  {
+    display: inline-block;
+    vertical-align: top;
+    width: 80px;
+  }
+  span
+  {
+    display: inline-block;
+    vertical-align: top;
+  }
+}

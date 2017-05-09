@@ -10,6 +10,7 @@ regions:
   navigation: Navigation
   header: Header
   content: Content
+  after_content: After Content
   footer: Footer
 libraries-override:
   classy/base:

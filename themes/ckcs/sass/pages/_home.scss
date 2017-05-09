@@ -19,6 +19,12 @@
   {
     margin: 0;
     list-style: none;
+    
+    @media screen and (max-width: 1120px)
+    {
+      max-width: 860px;
+      margin: 0 auto;
+    }
   }
   li
   {
@@ -29,7 +35,6 @@
   .service
   {
     display: block;
-    padding-top: 182px;
     width: 175px;
     padding: 182px 20px 10px 20px;
     background-position: top center;
@@ -62,6 +67,32 @@
   .service__volunteers
   {
     background-image: url(../images/icon-volunteers.svg);
+  }
+  &
+  {
+    @media screen and (max-width: 760px)
+    {
+      ul
+      {
+        margin: 0 25px;
+      }
+      li
+      {
+        display: table-row;
+      }
+      .service
+      {
+        display: table-cell;
+        height: 110px;
+        width: auto;
+        padding: 0 0 0 120px;
+        background-position: left center;
+        background-size: 100px auto;
+        font-size: 1.25em;
+        text-align: left;
+        vertical-align: middle;
+      }
+    }
   }
 }
 .block--donate-now
