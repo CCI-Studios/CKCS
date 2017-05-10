@@ -7,8 +7,18 @@ dependencies:
 id: default_node
 label: 'Default node'
 type: 'canonical_entities:node'
-pattern: '/[node:title]'
-selection_criteria: {  }
+pattern: '/[node:menu-link:parents:join-path]/[node:title]'
+selection_criteria:
+  714de93d-1cd8-40d3-8fa1-375a76128454:
+    id: node_type
+    bundles:
+      accordion_page: accordion_page
+      page: page
+      webform: webform
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 714de93d-1cd8-40d3-8fa1-375a76128454
 selection_logic: and
 weight: 0
 relationships: {  }

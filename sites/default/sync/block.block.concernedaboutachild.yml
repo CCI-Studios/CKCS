@@ -15,7 +15,7 @@ third_party_settings:
 id: concernedaboutachild
 theme: ckcs
 region: navigation
-weight: -6
+weight: -9
 provider: null
 plugin: 'block_content:8c481e9a-d064-4562-a78e-415f07a2b334'
 settings:

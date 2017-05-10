@@ -15,7 +15,7 @@ _core:
 id: ckcs_branding
 theme: ckcs
 region: navigation
-weight: -7
+weight: -11
 provider: null
 plugin: system_branding_block
 settings:
