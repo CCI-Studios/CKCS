@@ -16,7 +16,7 @@ third_party_settings:
 id: homepageservices
 theme: ckcs
 region: header
-weight: -7
+weight: -10
 provider: null
 plugin: 'block_content:e18997e8-9e57-4fee-a9f8-a1e85ef80207'
 settings:

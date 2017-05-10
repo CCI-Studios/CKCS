@@ -15,7 +15,7 @@ third_party_settings:
 id: views_block__header_images_block_1
 theme: ckcs
 region: header
-weight: -8
+weight: -11
 provider: null
 plugin: 'views_block:header_images-block_1'
 settings:

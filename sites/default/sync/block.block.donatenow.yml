@@ -16,12 +16,12 @@ third_party_settings:
 id: donatenow
 theme: ckcs
 region: header
-weight: 0
+weight: -9
 provider: null
 plugin: 'block_content:7e83821f-2c59-43a2-ba9f-323f70d55dc9'
 settings:
   id: 'block_content:7e83821f-2c59-43a2-ba9f-323f70d55dc9'
-  label: 'Donate Now'
+  label: 'Pouvez-vous aider à faire la différence?'
   provider: block_content
   label_display: '0'
   status: true
