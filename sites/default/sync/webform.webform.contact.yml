@@ -63,9 +63,9 @@ settings:
   draft_button_attributes: {  }
   draft_saved_message: ''
   draft_loaded_message: ''
-  confirmation_type: url_message
+  confirmation_type: message
   confirmation_title: ''
-  confirmation_message: 'Your message has been sent.'
+  confirmation_message: 'Thank you for contacting Chatham-Kent Children&#39;s Services, your submission has been received.'
   confirmation_url: '<front>'
   confirmation_attributes: {  }
   confirmation_back: true
