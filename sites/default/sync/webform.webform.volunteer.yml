@@ -60,7 +60,7 @@ settings:
   draft_loaded_message: ''
   confirmation_type: page
   confirmation_title: ''
-  confirmation_message: ''
+  confirmation_message: 'Thank you for offering to volunteer with us. Our volunteer coordinator will be in touch shortly.'
   confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true
