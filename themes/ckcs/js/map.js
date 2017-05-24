@@ -6,7 +6,7 @@
   
   function createMap()
   {
-    var location = new google.maps.LatLng(42.4022038, -82.20926);
+    var location = getMapCenterLatLng();
     var mapOptions = {
       zoom: 15,
       center: location,
@@ -16,6 +16,15 @@
       styles: getMapStyle()
     };
     map = new google.maps.Map($(".block--contact-map .contact-map").get(0),mapOptions);
+  }
+  function getMapCenterLatLng()
+  {
+    if ($(window).width() >= 640) {
+      return new google.maps.LatLng(42.4022038, -82.21596);
+    } else {
+      return new google.maps.LatLng(42.4022038, -82.20926);
+    }
+    
   }
   function createMarker()
   {
