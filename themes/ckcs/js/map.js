@@ -16,6 +16,11 @@
       styles: getMapStyle()
     };
     map = new google.maps.Map($(".block--contact-map .contact-map").get(0),mapOptions);
+    google.maps.event.addDomListener(window, "resize", function() {
+      var center = map.getCenter();
+      google.maps.event.trigger(map, "resize");
+      map.setCenter(center);
+    });
   }
   function getMapCenterLatLng()
   {
