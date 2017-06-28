@@ -307,4 +307,23 @@
   {
     right: -15px;
   }
+  .pause-container
+  {
+    text-align: center;
+    padding-top: 1em;
+    
+    button
+    {
+      font-size: 0;
+      background-image: url(../images/pause.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      padding: 0;
+      height: 25px;
+      line-height: 25px;
+      width: 25px;
+      min-width: 0;
+      border-radius: 5px;
+    }
+  }
 }
