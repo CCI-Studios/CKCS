@@ -5,7 +5,7 @@ features:
   favicon: 1
 logo:
   use_default: 0
-  path: themes/ckcs/images/logo.png
+  path: themes/ckcs/images/logo.svg
 favicon:
   use_default: 0
   path: themes/ckcs/images/favicon.ico
