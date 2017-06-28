@@ -125,8 +125,7 @@
 }
 .node--type-header-image
 {
-  height: 0;
-  padding-bottom: 25%;
+  height: 320px;
   position: relative;
   background-repeat: no-repeat;
   background-position: center center;
@@ -136,7 +135,7 @@
   {
     @media screen and (max-width: 1000px)
     {
-      padding-bottom: 320px;
+      height: 275px;
     }
   }
   
