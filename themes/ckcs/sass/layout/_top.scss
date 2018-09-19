@@ -91,3 +91,41 @@
     line-height: 40px;
   }
 }
+.region-top .menu--social
+{
+  float: right;
+  padding: 4px 0;
+  margin-right: 20px;
+
+  .menu
+  {
+    list-style: none;
+    margin: 0;
+
+    li
+    {
+      list-style: none;
+      margin: 0;
+      display: inline-block;
+      vertical-align: top;
+    }
+    a
+    {
+      font-size: 0;
+      display: block;
+      width: 32px;
+      height: 32px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 26px 26px;
+    }
+    .fb
+    {
+      background-image: url(../images/social-fb.svg);
+    }
+    .tw
+    {
+      background-image: url(../images/social-tw.svg);
+    }
+  }
+}
