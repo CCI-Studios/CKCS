@@ -5,10 +5,11 @@ package: 'Webform Demo'
 # core: 8.x
 dependencies:
   - 'drupal:block'
-  - 'drupal:webform'
+  - 'webform:webform'
+  - 'webform:webform_node'
 
-# Information added by Drupal.org packaging script on 2017-04-21
-version: '8.x-5.0-beta12'
+# Information added by Drupal.org packaging script on 2019-03-28
+version: '8.x-5.2'
 core: '8.x'
 project: 'webform'
-datestamp: 1492798453
+datestamp: 1553768595

@@ -4,7 +4,6 @@ dependencies:
   config:
     - field.storage.node.webform
     - node.type.webform_demo_event
-    - webform.webform.demo_event_registration
   module:
     - webform
 id: node.webform_demo_event.webform
@@ -20,15 +19,11 @@ default_value:
     status: open
     open: ''
     close: ''
-    target_uuid: c9a4a1ff-ba66-454d-a572-9c2624b73a67
+    target_uuid: ''
 default_value_callback: ''
 settings:
   handler: 'default:webform'
   handler_settings:
     target_bundles: null
     auto_create: false
-  default_data: ''
-  status: open
-  open: ''
-  close: ''
 field_type: webform

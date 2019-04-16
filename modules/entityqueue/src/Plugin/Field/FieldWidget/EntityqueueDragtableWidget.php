@@ -5,6 +5,7 @@ namespace Drupal\entityqueue\Plugin\Field\FieldWidget;
 use Drupal\Component\Utility\Html;
 use Drupal\Component\Utility\NestedArray;
 use Drupal\Core\Entity\Element\EntityAutocomplete;
+use Drupal\Core\Field\EntityReferenceFieldItemListInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
 use Drupal\Core\Field\Plugin\Field\FieldWidget\EntityReferenceAutocompleteWidget;
@@ -34,13 +35,66 @@ class EntityqueueDragtableWidget extends EntityReferenceAutocompleteWidget {
   /**
    * {@inheritdoc}
    */
+  public static function defaultSettings() {
+    return [
+      'link_to_entity' => FALSE,
+      'link_to_edit_form' => TRUE,
+    ] + parent::defaultSettings();
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function settingsForm(array $form, FormStateInterface $form_state) {
+    $elements = parent::settingsForm($form, $form_state);
+
+    $elements['link_to_entity'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Link label to the referenced entity'),
+      '#default_value' => $this->getSetting('link_to_entity'),
+    ];
+    $elements['link_to_edit_form'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Add a link to the edit form of the referenced entity'),
+      '#default_value' => $this->getSetting('link_to_edit_form'),
+    ];
+
+    return $elements;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function settingsSummary() {
+    $summary = parent::settingsSummary();
+
+    $settings = $this->getSettings();
+    if (!empty($settings['link_to_entity'])) {
+      $summary[] = $this->t('Link to the referenced entity');
+    }
+    if (!empty($settings['link_to_edit_form'])) {
+      $summary[] = $this->t('Link to the edit form of the referenced entity');
+    }
+
+    return $summary;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
+    assert($items instanceof EntityReferenceFieldItemListInterface);
+    $referenced_entities = $items->referencedEntities();
     $field_name = $this->fieldDefinition->getName();
     $parents = $form['#parents'];
-    $referenced_entities = $items->referencedEntities();
 
     if (isset($referenced_entities[$delta])) {
-      $entity_label = EntityAutocomplete::getEntityLabels([$referenced_entities[$delta]]);
+      if ($this->getSetting('link_to_entity') && !$referenced_entities[$delta]->isNew()) {
+        $entity_label = $referenced_entities[$delta]->toLink()->toString();
+      }
+      else {
+        $entity_label = $referenced_entities[$delta]->label();
+      }
       $id_prefix = implode('-', array_merge($parents, [$field_name, $delta]));
 
       $element += [
@@ -54,6 +108,10 @@ class EntityqueueDragtableWidget extends EntityReferenceAutocompleteWidget {
         'entity' => [
           '#type' => 'value',
           '#default_value' => $referenced_entities[$delta],
+        ],
+        'edit' => $referenced_entities[$delta]->toLink($this->t('Edit'), 'edit-form', ['query' => \Drupal::destination()->getAsArray()])->toRenderable() + [
+          '#attributes' => ['class' => ['form-item']],
+          '#access' => (bool) $this->getSetting('link_to_edit_form'),
         ],
         'remove' => [
           '#type' => 'submit',
@@ -137,7 +195,7 @@ class EntityqueueDragtableWidget extends EntityReferenceAutocompleteWidget {
 
     // Ensure the widget allows adding additional items.
     if ($element['#cardinality'] != FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED) {
-      return;
+      return NULL;
     }
 
     // Add a DIV around the delta receiving the Ajax effect.
@@ -169,7 +227,7 @@ class EntityqueueDragtableWidget extends EntityReferenceAutocompleteWidget {
     $submitted_values = NestedArray::getValue($form_state->getValues(), array_slice($button['#parents'], 0, -2));
 
     // Check submitted values for empty items.
-    $new_values = array();
+    $new_values = [];
     foreach ($submitted_values as $delta => $submitted_value) {
       if ($delta !== 'add_more' && (isset($submitted_value['target_id']) || isset($submitted_value['entity']))) {
         $new_values[] = $submitted_value;

@@ -1,6 +1,6 @@
 /**
  * @file
- * Javascript behaviors for toggle integration.
+ * JavaScript behaviors for toggle integration.
  */
 
 (function ($, Drupal) {
@@ -41,6 +41,12 @@
 
         $toggle.toggles(options);
 
+        // Trigger change event for #states API.
+        // @see Drupal.states.Trigger.states.checked.change
+        $toggle.on('toggle', function () {
+          $checkbox.trigger('change');
+        });
+
         // If checkbox is disabled then add the .disabled class to the toggle.
         if ($checkbox.attr('disabled') || $checkbox.attr('readonly')) {
           $toggle.addClass('disabled');
@@ -48,7 +54,6 @@
 
         // Add .clearfix to the wrapper.
         $wrapper.addClass('clearfix');
-
       });
     }
   };
@@ -61,7 +66,7 @@
         var $wrapper = $toggle.parent();
         var $checkbox = $wrapper.find('input[type="checkbox"]');
         var isDisabled = ($checkbox.attr('disabled') || $checkbox.attr('readonly'));
-        (isDisabled) ? $toggle.addClass('disabled') : $toggle.removeClass('disabled');
+        $toggle[isDisabled ? 'disabled' : 'disabled']();
       });
     });
   }

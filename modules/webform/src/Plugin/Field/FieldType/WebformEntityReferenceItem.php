@@ -2,14 +2,12 @@
 
 namespace Drupal\webform\Plugin\Field\FieldType;
 
-use Drupal\Core\Entity\ContentEntityInterface;
-use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
 use Drupal\Core\Field\Plugin\Field\FieldType\EntityReferenceItem;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\TypedData\DataDefinition;
-use Drupal\webform\WebformInterface;
 
 /**
  * Defines the 'webform_entity_reference' entity field type.
@@ -35,18 +33,6 @@ class WebformEntityReferenceItem extends EntityReferenceItem {
     return [
       'target_type' => 'webform',
     ] + parent::defaultStorageSettings();
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public static function defaultFieldSettings() {
-    return [
-      'default_data' => '',
-      'status' => WebformInterface::STATUS_OPEN,
-      'open' => '',
-      'close' => '',
-    ] + parent::defaultFieldSettings();
   }
 
   /**
@@ -109,49 +95,6 @@ class WebformEntityReferenceItem extends EntityReferenceItem {
   }
 
   /**
-   * Get an entity's webform field name.
-   *
-   * @param \Drupal\Core\Entity\EntityInterface $entity
-   *   A fieldable content entity.
-   *
-   * @return string
-   *   The name of the webform field or an empty string.
-   */
-  public static function getEntityWebformFieldName(EntityInterface $entity = NULL) {
-    if ($entity === NULL || !method_exists($entity, 'hasField')) {
-      return '';
-    }
-
-    if ($entity instanceof ContentEntityInterface) {
-      $fields = $entity->getFieldDefinitions();
-      foreach ($fields as $field_name => $field_definition) {
-        if ($field_definition->getType() == 'webform') {
-          return $field_name;
-        }
-      }
-    }
-    return '';
-  }
-
-  /**
-   * Get an entity's target webform.
-   *
-   * @param \Drupal\Core\Entity\EntityInterface $entity
-   *   A fieldable content entity.
-   *
-   * @return \Drupal\webform\WebformInterface|null
-   *   The entity's target webform or NULL.
-   */
-  public static function getEntityWebformTarget(EntityInterface $entity = NULL) {
-    if ($field_name = self::getEntityWebformFieldName($entity)) {
-      return $entity->$field_name->entity;
-    }
-    else {
-      return NULL;
-    }
-  }
-
-  /**
    * {@inheritdoc}
    */
   public function storageSettingsForm(array &$form, FormStateInterface $form_state, $has_data) {
@@ -163,6 +106,15 @@ class WebformEntityReferenceItem extends EntityReferenceItem {
    */
   public static function getPreconfiguredOptions() {
     return [];
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getSettableOptions(AccountInterface $account = NULL) {
+    /** @var \Drupal\webform\WebformEntityStorageInterface $webform_storage */
+    $webform_storage = \Drupal::service('entity_type.manager')->getStorage('webform');
+    return $webform_storage->getOptions(FALSE);
   }
 
 }
