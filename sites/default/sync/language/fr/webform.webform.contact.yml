@@ -1,5 +1,0 @@
-title: 'Contact Us'
-elements: "first_name:\n  '#title': Prénom\nlast_name:\n  '#title': 'Nom de famille'\nphone_number:\n  '#title': Téléphone\nemail:\n  '#title': Email\npreferred_method_of_communication:\n  '#title': 'Méthode préférée de communication'\n  '#options':\n    phone: Téléphone\n"
-settings:
-  form_submit_label: 'Envoyer le message'
-  confirmation_message: 'Your message has been sent.'

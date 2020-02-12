@@ -1,3 +1,0 @@
-elements: "first_name:\n  '#title': Prénom\nlast_name:\n  '#title': 'Nom de famille'\npreferred_method_of_communication:\n  '#options':\n    phone: Téléphone\n"
-settings:
-  form_submit_label: Soumettre
