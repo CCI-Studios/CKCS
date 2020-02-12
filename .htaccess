@@ -1,3 +1,10 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^(www\.)?ckcs\.on\.ca$ [NC]
+RewriteRule ^(.*)$ https://ckcs.on.ca/$1 [L,R=301]
+</IfModule>
+
 #
 # Apache/PHP/Drupal settings:
 #

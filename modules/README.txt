@@ -1,42 +1,42 @@
-SMTP Authentication Support module for Drupal 8.x.
-This module adds SMTP functionality to Drupal.
+Modules extend your site functionality beyond Drupal core.
 
-REQUIREMENTS
-------------
-* Access to an SMTP server
-* The following PHP extensions need to be installed: ereg, hash, date & pcre.
+WHAT TO PLACE IN THIS DIRECTORY?
+--------------------------------
 
-* Optional: To connect to an SMTP server using SSL, you need to have the
-  openssl package installed on your server, and your webserver and PHP
-  installation need to have additional components installed and configured.
+Placing downloaded and custom modules in this directory separates downloaded and
+custom modules from Drupal core's modules. This allows Drupal core to be updated
+without overwriting these files.
 
-INSTALLATION INSTRUCTIONS
--------------------------
-1.  Copy the files included in the tarball into a directory named "smtp" in
-    your Drupal /modules/ directory.
-2.  Login as site administrator.
-3.  Enable the SMTP Authentication Support module on the Manage -> Extend
-    page.
-4.  Fill in required settings on the Manage -> Configuration -> System ->
-    SMTP Authentication Support page.
-5.  Enjoy.
+DOWNLOAD ADDITIONAL MODULES
+---------------------------
 
-NOTES
------
-This module sends email by connecting to an SMTP server.  Therefore, you need
-to have access to an SMTP server for this module to work.
+Contributed modules from the Drupal community may be downloaded at
+https://www.drupal.org/project/project_module.
 
-Drupal will often use the email address entered into Manage ->
-Configuration -> Site information -> E-mail address as the from address.  It is
-important for this to be the correct address and some ISPs will block email that
-comes from an invalid address.
+ORGANIZING MODULES IN THIS DIRECTORY
+------------------------------------
 
-This module no longer uses the PHPMailer package as an external library, instead
-a slimmed down version of the library have been relicensed and integrated with the
-smtp module.
+You may create subdirectories in this directory, to organize your added modules,
+without breaking the site. Some common subdirectories include "contrib" for
+contributed modules, and "custom" for custom modules. Note that if you move a
+module to a subdirectory after it has been enabled, you may need to clear the
+Drupal cache so it can be found.
 
-Connecting to an SMTP server using SSL is possible only if PHP's openssl
-extension is working.  If the SMTP module detects openssl is available it
-will display the options in the modules settings page.
+There are number of directories that are ignored when looking for modules. These
+are 'src', 'lib', 'vendor', 'assets', 'css', 'files', 'images', 'js', 'misc',
+'templates', 'includes', 'fixtures' and 'Drupal'.
 
-Sending mail to Gmail requires SSL or TLS.
+MULTISITE CONFIGURATION
+-----------------------
+
+In multisite configurations, modules found in this directory are available to
+all sites. You may also put modules in the sites/all/modules directory, and the
+versions in sites/all/modules will take precedence over versions of the same
+module that are here. Alternatively, the sites/your_site_name/modules directory
+pattern may be used to restrict modules to a specific site instance.
+
+MORE INFORMATION
+----------------
+
+Refer to the “Developing for Drupal” section of the README.txt in the Drupal
+root directory for further information on extending Drupal with custom modules.
